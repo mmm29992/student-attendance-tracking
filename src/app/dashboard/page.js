@@ -1,3 +1,11 @@
+"use client";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
+
 export default function Dashboard() {
-  return <div>dashboard</div>
+  const { setTheme } = useTheme();
+  useEffect(() => {
+    setTheme("light");
+  }, []);
+  return <div>dashboard</div>;
 }
